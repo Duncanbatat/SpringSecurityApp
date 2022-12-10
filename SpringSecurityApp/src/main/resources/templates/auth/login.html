@@ -5,7 +5,7 @@
     <title>Login page</title>
 </head>
 <body>
-<form name="login_form" method="post" action="/process_login">
+<form name="login_form" th:method="POST" action="/process_login">
     <label for="username">Введите имя пользователя:</label>
     <input type="text" name="username" id="username"/>
     <br/>
@@ -15,7 +15,7 @@
     <input type="submit" value="Login"/>
 
     <div th:if="${param.error}" style="color: red">
-        Неправильное имя или пароль
+        Incorrect password or username!
     </div>
 </form>
 </body>

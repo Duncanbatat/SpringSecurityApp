@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import ru.artdy.SpringSecurityApp.security.AuthProviderImpl;
 
 @EnableWebSecurity
+@SuppressWarnings("deprecation")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final AuthProviderImpl authProvider;
@@ -21,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/auth/login", "/error").permitAll()
+                .antMatchers("/auth/login", "/auth/registration", "/error").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/auth/login")

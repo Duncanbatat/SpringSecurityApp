@@ -25,7 +25,6 @@ public class Person {
     @Column(name = "username")
     private String username;
 
-    @NotEmpty(message = "Year of birth shouldn't be empty!")
     @Min(value = 1900, message = "Year of birth must be greater than 1900!")
     @Column(name = "year_of_birth", nullable = false)
     private int yearOfBirth;
