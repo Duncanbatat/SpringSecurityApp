@@ -29,8 +29,6 @@ public class Person {
     @Column(name = "year_of_birth", nullable = false)
     private int yearOfBirth;
 
-
-    @NotEmpty(message = "Password shouldn't be empty!")
     @Column(name = "password")
     private String password;
 }

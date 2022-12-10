@@ -6,6 +6,7 @@
 </head>
 <body>
 <form name="login_form" th:method="POST" action="/process_login">
+    <input type="hidden" th:name="${_csrf.getParameterName()}" th:value="${_csrf.getToken()}"/>
     <label for="username">Введите имя пользователя:</label>
     <input type="text" name="username" id="username"/>
     <br/>

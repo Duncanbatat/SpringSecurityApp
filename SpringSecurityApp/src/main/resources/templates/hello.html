@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
 </head>
 <body>
     Hello, world!
+    <form th:method="POST" th:action="@{/logout}">
+        <input type="submit" th:value="Logout"/>
+    </form>
 </body>
 </html>
